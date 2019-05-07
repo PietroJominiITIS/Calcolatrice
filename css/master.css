@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+body, html {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Rubik, sans-serif;
+}
+
+.bg {
+  position: absolute;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  background-image: radial-gradient(circle, #abe3b9, #5db0a4, #5db0a4, #1c7b8a, #004865, #051937);
+}
+
+.full-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+div.calculator {
+  width: 900px;
+  height: 500px;
+  background-color: white;
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,.3);
+}
+
+div.separator {
+  position: absolute;
+  height: 400px;
+  width: 10px;
+  background-image: linear-gradient(to bottom, #2af598, #00e7cd, #00d3f6, #00bbff, #009efd);
+}
+
+table.keyboard {
+  width: 450px;
+  height: 500px;
+  padding: 100px;
+  font-size: 1.5em;
+}
+
+td.keyboard {
+  text-align: center;
+  transition: all .5s ease;
+  border-radius: 2px;
+  color: #000;
+}
+
+td.keyboard:hover {
+  color: #3ca23c;
+  cursor: pointer;
+}
+
+div.screen {
+  width: 450px;
+  height: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 225px), -50%);
+  font-size: 1.5em;
+  text-align: center;
+}
+
+div.placeholder {
+  font-style: italic;
+  opacity: .5;
+}
+
+.info {
+  width: calc(900px - 4em);
+  height: calc(500px - 4em);
+  background-image: linear-gradient(to bottom, #00e7cd, #00d3f6, #00bbff);
+  z-index: 1;
+  transition: all .5s ease-in-out;
+  clip-path: circle(0px at 900px calc(250px - 2em));
+  cursor: pointer;
+  color: #fff;
+}
+
+div.enabled {
+  clip-path: circle(100%);
+}
+
+.toggleMenu > span.enabled {
+  color: #00bbff;
+}
+
+.toggleMenu {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.24);
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + 450px), -50%);
+  z-index: 2;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+
+.toggleMenu:hover {
+box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.54);
+}
+
+.toggleMenu > span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 400;
+  color: #3ca23c;
+  transition: all 350ms ease;
+}
+
+.infoText {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+
+.infoText > p {
+  padding: 10px;
+  margin-top: 0;
+  font-size: 1.5em;
+  transform: rotate(180deg);
+}
+
+.infoText > b {
+  font-size: 1.4em;
+}
+
+.infoText > div.name {
+  line-height: 2.5em;
+}
